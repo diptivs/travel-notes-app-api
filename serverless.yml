@@ -80,5 +80,5 @@ functions:
           cors: true
           authorizer: aws_iam
 resources:
-# DynamoDB
-- ${file(infrastructure/dynamodb.yml)}
+  - ${file(infrastructure/dynamodb.yml)}
+  - ${file(resources/s3-bucket.yml)}
