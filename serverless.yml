@@ -81,6 +81,6 @@ functions:
           authorizer: aws_iam
 resources:
   - ${file(infrastructure/dynamodb.yml)}
-  - ${file(resources/s3.yml)}
-  - ${file(resources/cognito-userPool.yml)}
-  - ${file(resources/cognito-identityPool.yml)}
+  - ${file(infrastructure/s3.yml)}
+  - ${file(infrastructure/cognito-userPool.yml)}
+  - ${file(infrastructure/cognito-identityPool.yml)}
