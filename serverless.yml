@@ -79,6 +79,14 @@ functions:
           method: delete
           cors: true
           authorizer: aws_iam
+  listadmin:
+    handler: listNotesAdmin.main
+    events:
+        - http:
+            path: notesadmin
+            method: get
+            cors: true
+            authorizer: aws_iam
 resources:
   - ${file(infrastructure/dynamodb.yml)}
   - ${file(infrastructure/s3.yml)}
